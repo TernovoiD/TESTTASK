@@ -15,7 +15,8 @@ struct CustomTextField: View {
             .padding()
             .background(.customBackground)
             .onTapGesture { isFocused.toggle() }
-            .animation(.easeInOut, value: isFocused)
+            .animation(.spring, value: isFocused)
+            .ignoresSafeArea(.keyboard)
     }
 }
 
@@ -29,7 +30,7 @@ fileprivate struct CustomStyle: TextFieldStyle {
     let isEmpty: Bool
     let state: State
     private let height = 48 * Screen.scaleFactor
-    private let spaceFactor = 1.6
+    private let spaceFactor = 1.65
     
     enum State {
         case normal, focused, error
@@ -44,6 +45,7 @@ fileprivate struct CustomStyle: TextFieldStyle {
                         if isTitleShifted { Spacer() }
                         configuration
                             .setHeight(isTitleShifted ? height / spaceFactor : height)
+                            .tint(.gray)
                     }
                 }
             }
