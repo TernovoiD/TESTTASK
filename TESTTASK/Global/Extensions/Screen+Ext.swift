@@ -10,6 +10,7 @@ struct Screen {
         let originalDesignHeight: CGFloat = 852.0
         let scaledHeight =  screenHeight / originalDesignHeight
         
-        return min(scaledWidth, scaledHeight)
+        let scaleFactor = min(scaledWidth, scaledHeight)
+        return max(0.8, min(scaleFactor, 1.4))
     }
 }
