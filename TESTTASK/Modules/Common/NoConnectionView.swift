@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct NoConnectionView: View {
+    @EnvironmentObject private var internet: ConnectionMonitor
+    
     var body: some View {
         VStack(spacing: 24) {
             Image(.lostConnection)
@@ -9,7 +11,7 @@ struct NoConnectionView: View {
                 .setHeight(200)
             Text(LocalizedText.noConnection)
                 .font(.nunito(size: 20))
-            PrimaryButton(LocalizedText.Button.tryAgain, disabled: false) { }
+            PrimaryButton(LocalizedText.Button.tryAgain, disabled: false) { internet.checkConnection() }
         }
         
     }
@@ -17,4 +19,5 @@ struct NoConnectionView: View {
 
 #Preview {
     NoConnectionView()
+        .environmentObject(ConnectionMonitor())
 }

@@ -8,7 +8,7 @@ struct HeaderView: View {
             .font(.nunito(size: 20))
             .padding(16)
             .frame(maxWidth: .infinity, maxHeight: 56 * Screen.scaleFactor)
-            .background(.customPrimary)
+            .background(.customPrimary, ignoresSafeAreaEdges: [ ])
     }
 }
 

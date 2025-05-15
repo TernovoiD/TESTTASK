@@ -2,9 +2,10 @@ import Foundation
 
 final class UserService {
     private let request = RequestProvider.shared
+    private let usersPerPage = "6"
     
     func load(page: Int) async throws -> [User] {
-        let parameters = [ "page": String(page), "count": "6" ]
+        let parameters = [ "page": String(page), "count": usersPerPage ]
         let response: APIUsersResponse = try await request.call(endpoint: .users, method: .get, parameters: parameters)
         let apiUsers = response.users
         guard let apiUsers else { return [ ] }

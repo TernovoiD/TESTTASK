@@ -4,7 +4,7 @@ import SwiftUI
 struct TESTTASKApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppContent()
         }
     }
 }

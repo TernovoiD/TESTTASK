@@ -1,31 +1,39 @@
 import SwiftUI
 
-struct SignUpResultView: View {
+struct ResultView: View {
+    @EnvironmentObject private var router: AppRouter
+    let success: Bool
+    
     var body: some View {
         VStack(spacing: 24) {
-            Image(.registerSuccess)
+            Image(success ? .registerSuccess : .registerFailure)
                 .resizable()
                 .scaledToFit()
                 .setHeight(200)
-            Text(LocalizedText.registerSuccess)
+            Text(success ? LocalizedText.registerSuccess : LocalizedText.registerFailure)
                 .font(.nunito(size: 20))
             PrimaryButton(LocalizedText.Button.gotIt, disabled: false) { }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .overlay {
-            closeButton
-                .foregroundStyle(.black.opacity(0.48))
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
-        }
+        .overlay { closeButton }
         .padding(24)
+    }
+    
+    private func gotItAction() {
+        if success {
+            print("success")
+        } else {
+            print("failure")
+        }
     }
 }
 
 #Preview {
-    SignUpResultView()
+    ResultView(success: true)
+        .environmentObject(AppRouter(current: .launching))
 }
 
-private extension SignUpResultView {
+private extension ResultView {
     var closeButton: some View {
         Button {
             
@@ -37,5 +45,7 @@ private extension SignUpResultView {
                 .frame(maxWidth: 24, maxHeight: 24)
                 .bold()
         }
+        .foregroundStyle(.black.opacity(0.48))
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
     }
 }
