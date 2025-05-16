@@ -12,6 +12,7 @@ struct AppContent: View {
                     .transition(.move(edge: .leading))
             case .home:
                 HomeView()
+                    .transition(.move(edge: .trailing))
             case .noConnection:
                 NoConnectionView()
                     .environmentObject(internet)

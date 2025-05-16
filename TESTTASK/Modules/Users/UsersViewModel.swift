@@ -12,6 +12,7 @@ final class UsersViewModel: ObservableObject {
         self.service = service
     }
     
+    @MainActor
     func loadUsers() async {
         loading = true
         do {

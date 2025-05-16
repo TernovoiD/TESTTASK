@@ -17,6 +17,7 @@ struct ResultView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .overlay { closeButton }
         .padding(24)
+        .background(.customBackground)
     }
     
     private func gotItAction() {

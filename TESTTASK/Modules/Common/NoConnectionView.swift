@@ -13,7 +13,8 @@ struct NoConnectionView: View {
                 .font(.nunito(size: 20))
             PrimaryButton(LocalizedText.Button.tryAgain, disabled: false) { internet.checkConnection() }
         }
-        
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(.customBackground)
     }
 }
 

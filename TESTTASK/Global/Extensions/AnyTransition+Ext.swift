@@ -2,6 +2,6 @@ import SwiftUI
 
 extension AnyTransition {
     static var slideBack: AnyTransition {
-        .asymmetric(insertion: .move(edge: .bottom), removal: .move(edge: .top))
+        .asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading))
     }
 }

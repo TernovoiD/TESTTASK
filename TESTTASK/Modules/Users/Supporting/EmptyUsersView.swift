@@ -10,7 +10,8 @@ struct EmptyUsersView: View {
             Text(LocalizedText.noUsers)
                 .font(.nunito(size: 20))
         }
-        .frame(maxWidth: .infinity)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(.customBackground)
     }
 }
 

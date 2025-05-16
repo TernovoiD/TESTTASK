@@ -12,10 +12,9 @@ struct UsersView: View {
         Group {
             if viewModel.users.isEmpty { EmptyUsersView() } else { usersList }
         }
-        .transition(.slideBack)
         .animation(viewModel.users.count <= 6 ? .bouncy : nil, value: viewModel.users)
-#warning("Call is turned off")
-//        .task { await viewModel.loadUsers() }
+        .transition(.move(edge: .leading))
+        .task { await viewModel.loadUsers() }
     }
     
     private func loadNextPage() {
@@ -25,6 +24,7 @@ struct UsersView: View {
 
 #Preview {
     UsersView(service: UserService())
+        .background(.customBackground)
 }
 
 private extension UsersView {
@@ -66,7 +66,7 @@ private extension UsersView {
                 .font(.nunito(size: 18))
                 .lineLimit(3)
             Text(user.position)
-                .opacity(0.6)
+                .foregroundStyle(.black.opacity(0.6))
                 .padding(.top, 4)
                 .padding(.bottom, 8)
                 .lineLimit(1)
@@ -79,5 +79,6 @@ private extension UsersView {
                 .padding(.bottom, 24)
             if line { Divider() }
         }
+        .foregroundStyle(.black.opacity(0.87))
     }
 }
