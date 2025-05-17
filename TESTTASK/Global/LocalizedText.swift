@@ -8,6 +8,8 @@ struct LocalizedText {
     static let registerSuccess = String(localized: "User successfully registered")
     static let registerFailure = String(localized: "That email is already registered")
     static let selectPosition = String(localized: "Select your position")
+    static let camera = String(localized: "Camera")
+    static let gallery = String(localized: "Gallery")
     
     struct TextField {
         static let name = String(localized: "Your name")
@@ -18,6 +20,7 @@ struct LocalizedText {
         
         static let requiredField = String(localized: "Required field")
         static let invalidEmail = String(localized: "Invalid email format")
+        static let requiredPhoto = String(localized: "Photo is required")
     }
     
     struct Button {
@@ -25,6 +28,7 @@ struct LocalizedText {
         static let sighUp = String(localized: "Sign up")
         static let tryAgain = String(localized: "Try again")
         static let upload = String(localized: "Upload")
+        static let cancel = String(localized: "Cancel")
     }
     
     struct TabBar {

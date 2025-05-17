@@ -1,30 +1,6 @@
 import SwiftUI
 
-struct CustomTextField: View {
-    @FocusState private var isFocused: Bool
-    @State var text = ""
-    
-    
-    var body: some View {
-        let customStyle = CustomStyle(labelText: LocalizedText.TextField.name, supportingText: "", isEmpty: text.isEmpty, state: isFocused ? .focused : .normal)
-        
-        TextField("", text: $text.animation(.easeInOut))
-            .textFieldStyle(customStyle)
-            .focused($isFocused)
-            .font(.nunito(size: 14))
-            .padding()
-            .background(.customBackground)
-            .onTapGesture { isFocused.toggle() }
-            .animation(.spring, value: isFocused)
-            .ignoresSafeArea(.keyboard)
-    }
-}
-
-#Preview {
-    CustomTextField()
-}
-
-fileprivate struct CustomStyle: TextFieldStyle {
+struct CustomTFStyle: TextFieldStyle {
     let labelText: String
     let supportingText: String
     let isEmpty: Bool

@@ -1,20 +1,20 @@
 import SwiftUI
 
-struct NoConnectionView: View {
+struct EmptyUsersView: View {
     var body: some View {
         VStack(spacing: 24) {
-            Image(.lostConnection)
+            Image(.users)
                 .resizable()
                 .scaledToFit()
                 .setHeight(200)
-            Text(LocalizedText.noConnection)
+            Text(LocalizedText.noUsers)
                 .font(.nunito(size: 20))
-            PrimaryButton(LocalizedText.Button.tryAgain, disabled: false) { }
         }
-        
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(.customBackground)
     }
 }
 
 #Preview {
-    NoConnectionView()
+    EmptyUsersView()
 }

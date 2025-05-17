@@ -32,8 +32,8 @@ struct APIUser : Codable {
 	}
     
     func transform() -> User? {
-        guard let id, let name, let email, let phone, let position else { return nil }
-        return User(id: id, name: name, email: email, phone: phone, position: position, photo: phone)
+        guard let id, let name, let email, let phone, let position, let photo else { return nil }
+        return User(id: id, name: name, email: email, phone: phone, position: position, photo: photo)
     }
 
 }
