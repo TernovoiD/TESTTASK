@@ -11,6 +11,7 @@ struct NoConnectionView: View {
                 .setHeight(200)
             Text(LocalizedText.noConnection)
                 .font(.nunito(size: 20))
+                .foregroundStyle(.black.opacity(0.87))
             PrimaryButton(LocalizedText.Button.tryAgain, disabled: false) { internet.checkConnection() }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

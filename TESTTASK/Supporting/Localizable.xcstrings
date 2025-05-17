@@ -2,79 +2,254 @@
   "sourceLanguage" : "en",
   "strings" : {
     "" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
     },
     "+38 (XXX) XXX - XX - XX" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+38 (XXX) XXX - XX - XX"
+          }
+        }
+      }
     },
     "Camera" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Камера"
+          }
+        }
+      }
     },
     "Cancel" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скасувати"
+          }
+        }
+      }
     },
     "Choose how you want to add a photo" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Виберіть спосіб додавання фото"
+          }
+        }
+      }
     },
     "Email" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Електронна пошта"
+          }
+        }
+      }
     },
     "Gallery" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Галерея"
+          }
+        }
+      }
     },
     "Got it" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Зрозуміло"
+          }
+        }
+      }
     },
     "Invalid email format" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Недійсний формат електронної пошти"
+          }
+        }
+      }
     },
     "Phone" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Телефон"
+          }
+        }
+      }
     },
     "Photo is required" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Потрібно вибрати фото"
+          }
+        }
+      }
     },
     "Required field" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Обов’язкове поле"
+          }
+        }
+      }
     },
     "Select your position" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Виберіть ваше положення"
+          }
+        }
+      }
     },
     "Sign up" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Зареєструватися"
+          }
+        }
+      }
     },
     "That email is already registered" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ця електронна пошта вже зареєстрована"
+          }
+        }
+      }
     },
     "There are no users yet" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поки що немає користувачів"
+          }
+        }
+      }
     },
     "There is no internet connection" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Обірвано з'єднання з Інтернетом"
+          }
+        }
+      }
     },
     "Try again" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Спробуйте ще раз"
+          }
+        }
+      }
     },
     "Upload" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Завантажити"
+          }
+        }
+      }
     },
     "Upload your photo" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Завантажте ваше фото"
+          }
+        }
+      }
     },
     "User successfully registered" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Користувач успішно зареєстрований"
+          }
+        }
+      }
     },
     "Users" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Користувачі"
+          }
+        }
+      }
     },
     "Working with GET request" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Робота з GET-запитом"
+          }
+        }
+      }
     },
     "Working with POST request" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Робота з POST-запитом"
+          }
+        }
+      }
     },
     "Your name" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваше ім'я"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
