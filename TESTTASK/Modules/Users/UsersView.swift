@@ -48,16 +48,28 @@ private extension UsersView {
     
     func row(for user: User, line: Bool) -> some View {
         HStack(alignment: .top, spacing: 16) {
-            Image(.avatar)
-                .resizable()
-                .scaledToFit()
-                .setHeight(50)
+            image(for: user)
             info(for: user, line: line)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .font(.nunito(size: 14))
                 .opacity(0.87)
         }
         .padding(.top, 24)
+    }
+    
+    func image(for user: User) -> some View {
+        AsyncImage(url: URL(string: user.photo)) { Image in
+            Image
+                .resizable()
+                .scaledToFit()
+                .setHeight(50)
+                .clipShape(Circle())
+        } placeholder: {
+            Image(.avatar)
+                .resizable()
+                .scaledToFit()
+                .setHeight(50)
+        }
     }
     
     func info(for user: User, line: Bool) -> some View {

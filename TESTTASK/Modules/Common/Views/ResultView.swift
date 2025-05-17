@@ -12,20 +12,15 @@ struct ResultView: View {
                 .setHeight(200)
             Text(success ? LocalizedText.registerSuccess : LocalizedText.registerFailure)
                 .font(.nunito(size: 20))
-            PrimaryButton(LocalizedText.Button.gotIt, disabled: false) { }
+                .foregroundStyle(.black.opacity(0.87))
+            PrimaryButton(LocalizedText.Button.gotIt, disabled: false) {
+                router.current = .home
+            }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .overlay { closeButton }
         .padding(24)
         .background(.customBackground)
-    }
-    
-    private func gotItAction() {
-        if success {
-            print("success")
-        } else {
-            print("failure")
-        }
     }
 }
 
@@ -36,9 +31,7 @@ struct ResultView: View {
 
 private extension ResultView {
     var closeButton: some View {
-        Button {
-            
-        } label: {
+        Button { router.current = .home } label: {
             Image(systemName: IconNames.xMark.rawValue)
                 .resizable()
                 .scaledToFit()

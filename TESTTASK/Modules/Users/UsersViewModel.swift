@@ -20,8 +20,7 @@ final class UsersViewModel: ObservableObject {
             if loadedUsers.count < 6 { lastPage = true }
             users.append(contentsOf: loadedUsers)
             loading = false
-        } catch let error {
-            print(error.localizedDescription)
+        } catch {
             loading = false
             lastPage = true
         }

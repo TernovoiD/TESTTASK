@@ -19,16 +19,14 @@ struct AppContent: View {
                     .transition(.move(edge: .leading))
             case .registerSuccess(let state):
                 ResultView(success: state)
-                    .transition(.move(edge: .bottom))
+                    .transition(.move(edge: .leading))
             }
         }
+        .animation(.spring, value: router.current)
         .environmentObject(router)
         .onAppear { finishLaunching() }
         .onChange(of: internet.isConnected) { _, isConnected in
-            print(isConnected)
-            withAnimation(.easeInOut) {
-                router.current = isConnected ? .home : .noConnection
-            }
+            router.current = isConnected ? .home : .noConnection
         }
     }
     

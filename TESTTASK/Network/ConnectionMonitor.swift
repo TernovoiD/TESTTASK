@@ -18,7 +18,6 @@ class ConnectionMonitor: ObservableObject {
     
     func checkConnection() {
         self.isConnected = monitor.currentPath.status == .satisfied
-        print(isConnected)
     }
     
     deinit {

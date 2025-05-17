@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct CornerModifier: ViewModifier {
+struct CornersModifier: ViewModifier {
     let radius: CGFloat
     
     private var cornersShape: RoundedRectangle {
@@ -16,6 +16,6 @@ struct CornerModifier: ViewModifier {
 
 extension View {
     func corners(radius: CGFloat) -> some View {
-        return self.modifier(CornerModifier(radius: radius))
+        return self.modifier(CornersModifier(radius: radius))
     }
 }

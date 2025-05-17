@@ -7,22 +7,31 @@
     "+38 (XXX) XXX - XX - XX" : {
 
     },
+    "Camera" : {
+
+    },
+    "Cancel" : {
+
+    },
     "Choose how you want to add a photo" : {
 
     },
     "Email" : {
 
     },
-    "Got it" : {
+    "Gallery" : {
 
     },
-    "Hello, World!" : {
+    "Got it" : {
 
     },
     "Invalid email format" : {
 
     },
     "Phone" : {
+
+    },
+    "Photo is required" : {
 
     },
     "Required field" : {

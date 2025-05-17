@@ -7,7 +7,7 @@ final class AppRouter: ObservableObject {
         self.current = current
     }
     
-    enum Route {
+    enum Route: Equatable {
         case launching, home, noConnection, registerSuccess(Bool)
     }
 }
